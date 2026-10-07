@@ -13,7 +13,7 @@ http.createServer((req, res) => {
   }
   
   if (req.url === '/info') {
-  res.end('Sample API - Development Version');
+  res.end('Sample API - Development Version 1.1');
   return;
   }
   res.end('Sample API - Home');
