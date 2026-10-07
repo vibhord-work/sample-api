@@ -11,7 +11,11 @@ http.createServer((req, res) => {
     res.end('1.0.0');
     return;
   }
-
+  
+  if (req.url === '/info') {
+  res.end('Sample API - Development Version');
+  return;
+  }
   res.end('Sample API - Home');
   res.end('Welcome to Sample API');
 }).listen(port, () => console.log(`Listening on ${port}`));
