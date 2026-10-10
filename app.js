@@ -3,7 +3,7 @@ const port = process.env.PORT || 3000;
 
 http.createServer((req, res) => {
   if (req.url === '/health') {
-    res.end('BROKEN');
+    res.end('OK');
     return;
   }
 
