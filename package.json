@@ -1,0 +1,13 @@
+{
+  "name": "sample-api",
+  "version": "1.0.0",
+  "description": "Sample API for Jenkins CI pipeline lab",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
