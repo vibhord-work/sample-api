@@ -1,0 +1,23 @@
+flowchart TD
+    A[Developer commits to feature branch] --> B[Pull request opened or updated]
+    B --> C[Checkout and validate source]
+    C --> D[Install locked dependencies: npm ci]
+    D --> E[Quality and security checks]
+    E --> F[Unit and integration tests]
+    F --> G{All PR checks pass?}
+    G -- No --> H[Fail PR checks; notify author]
+    G -- Yes --> I[Review and merge to main]
+    I --> J[Build Docker image once]
+    J --> K[Tag with commit SHA]
+    K --> L[Scan image and publish to Docker Hub]
+    L --> M[Deploy exact image to dev]
+    M --> N[Health and smoke tests]
+    N --> O[Deploy exact image to staging]
+    O --> P[Staging smoke tests and release validation]
+    P --> Q{Production approval}
+    Q -- Rejected --> R[Stop promotion; retain current production]
+    Q -- Approved --> S[Rolling production deployment]
+    S --> T[Health checks and monitoring]
+    T --> U{Healthy?}
+    U -- Yes --> V[Release complete; notify team]
+    U -- No --> W[Rollback to previous image; alert team]
