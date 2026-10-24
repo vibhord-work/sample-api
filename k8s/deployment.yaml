@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: sample-api
-          image: vibhord/sample-api:does-not-exist
+          image: vibhord/sample-api:gitops-v1
           imagePullPolicy: IfNotPresent
 
           ports:
