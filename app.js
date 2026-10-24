@@ -18,6 +18,5 @@ http.createServer((req, res) => {
   }
 
   res.end('Sample API - Home Development');
-  res.end('Welcome to Sample API');
 }).listen(port, () => console.log(`Listening on ${port}`));
 
